@@ -9,6 +9,9 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.Temporal;
 
+import java.util.Map;
+
+
 @Service
 public class Liquidation implements ILiquidation{
 
@@ -97,5 +100,20 @@ public class Liquidation implements ILiquidation{
                 return;
             }
         }
+    }
+
+    public boolean searchCode(String code){
+        Map<String, Sinister> siniestros = baseData.getSinisters();
+        for(int i =0; i<baseData.getSinisters(); i++){
+            if(siniestros.containsKey(code)){
+                sinister = siniestros.get(code);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public double getLiquidation(){
+        return liquidation;
     }
 }

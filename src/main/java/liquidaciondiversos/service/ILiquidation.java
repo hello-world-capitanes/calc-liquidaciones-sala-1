@@ -8,4 +8,6 @@ public interface ILiquidation {
     void comprobarExcluida();
     void calcularTipoValoracion();
     void calcularInfraSeguro();
+    boolean searchCode(String code);
+    double getLiquidation();
 }

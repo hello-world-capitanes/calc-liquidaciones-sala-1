@@ -9,4 +9,5 @@ public class ProductWarranty { // garantia asociada a un producto
     private boolean excluded; // garantia excluida
     private PaymentType paymentType; // forma de calculo
     private double capitalInsured;
+    private Data date;
 }

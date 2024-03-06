@@ -7,4 +7,6 @@ public interface ILiquidation {
     void calcularTipoValoracion();
     void calcularTipoAseguramiento();
     void calcularInfraSeguro();
+    boolean searchCode(String code);
+    double getLiquidation();
 }

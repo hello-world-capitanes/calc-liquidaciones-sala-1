@@ -133,6 +133,7 @@ public class BaseData {
         warrantyMoistureRoof.setExcluded(false);
         warrantyMoistureRoof.setRisk(this.risks.get("MS"));
         warrantyMoistureRoof.setWarranty(this.warranties.get("RF"));
+
         ProductWarranty warrantyMoistureRoberyOutside = new ProductWarranty();
         warrantyMoistureRoberyOutside.setExcluded(true);
         warrantyMoistureRoberyOutside.setRisk(this.risks.get("MS"));

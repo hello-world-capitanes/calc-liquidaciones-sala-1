@@ -1,4 +1,4 @@
-package liquidaciondiversos;
+package liquidaciondiversos.model;
 
 
 import lombok.Data;

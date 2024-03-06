@@ -1,15 +1,13 @@
-package liquidaciondiversos;
-
+package liquidaciondiversos.model;
 
 import lombok.Data;
 
+import java.util.Date;
 import java.util.List;
 
 @Data
-public class Product {
+public class Risk {
     private String code;
     private String name;
-    List<ProductWarranty> productWarranties;
-
 
 }

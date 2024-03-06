@@ -1,8 +1,6 @@
 package liquidaciondiversos.example;
 
-import liquidaciondiversos.Product;
-import liquidaciondiversos.Risk;
-import liquidaciondiversos.Warranty;
+import liquidaciondiversos.model.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -45,14 +43,17 @@ public class BaseData {
         warrantyRoberyOutside.setCode("RO");
         warrantyRoberyOutside.setName("Robery outside");
         warrantyRoberyOutside.setWarrantyType(WarrantyType.CONTENT);
+
         Warranty warrantyRoof = new Warranty();
         warrantyRoof.setCode("RF");
         warrantyRoof.setName("Roof");
         warrantyRoof.setWarrantyType(WarrantyType.BUILDING);
+
         Warranty warrantyGeneralBuilding = new Warranty();
         warrantyGeneralBuilding.setCode("GB");
         warrantyGeneralBuilding.setName("General Building");
         warrantyGeneralBuilding.setWarrantyType(WarrantyType.BUILDING);
+
         Warranty warrantyHomeAppliances = new Warranty();
         warrantyHomeAppliances.setCode("HA");
         warrantyHomeAppliances.setName("Home Appliances");
@@ -84,6 +85,8 @@ public class BaseData {
         warrantyRoberyOutside.setRisk(this.risks.get("RO"));
         warrantyRoberyOutside.setPaymentType(PaymentType.PRIMER_RIESGO);
         warrantyRoberyOutside.setWarranty(this.warranties.get("RO"));
+
+
         ProductWarranty warrantyRoberyOutsideRoof = new ProductWarranty();
         warrantyRoberyOutsideRoof.setExcluded(true);
         warrantyRoberyOutsideRoof.setRisk(this.risks.get("RO"));

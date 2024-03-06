@@ -24,7 +24,7 @@ public class BaseData {
         createClients();
         createProducts();
         createPolicies();
-
+        createSinisters();
 
     }
 

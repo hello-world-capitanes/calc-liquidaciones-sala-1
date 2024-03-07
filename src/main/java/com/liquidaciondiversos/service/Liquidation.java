@@ -1,8 +1,11 @@
-package liquidaciondiversos.service;
-import liquidaciondiversos.example.BaseData;
-import liquidaciondiversos.model.ProductWarranty;
-import liquidaciondiversos.model.Sinister;
+package com.liquidaciondiversos.service;
+
+
+import com.liquidaciondiversos.example.BaseData;
+import com.liquidaciondiversos.model.Policy;
+import com.liquidaciondiversos.model.ProductWarranty;
 import lombok.Data;
+import lombok.Getter;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -10,7 +13,6 @@ import java.time.temporal.ChronoUnit;
 import java.time.temporal.Temporal;
 
 import java.util.Map;
-
 
 @Service
 public class Liquidation implements ILiquidation{
@@ -102,18 +104,29 @@ public class Liquidation implements ILiquidation{
         }
     }
 
-    public boolean searchCode(String code){
-        Map<String, Sinister> siniestros = baseData.getSinisters();
-        for(int i =0; i<baseData.getSinisters(); i++){
-            if(siniestros.containsKey(code)){
-                sinister = siniestros.get(code);
-                return true;
-            }
+
+    public Policy searchCode(int code){
+        Map<Integer, Policy> poliza = baseData.getPolicies();
+        Policy policy = poliza.get(code);
+        if(policy !=null){
+            return policy;
         }
-        return false;
+        return null;
     }
 
-    public double getLiquidation(){
+    public Sinister getSinister() {
+        return sinister;
+    }
+
+    public void setSinister(Sinister sinister) {
+        this.sinister = sinister;
+    }
+
+    @Override
+    public double getLiquidation() {
         return liquidation;
     }
+
+
+
 }

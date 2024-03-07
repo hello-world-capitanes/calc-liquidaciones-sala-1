@@ -1,10 +1,12 @@
-package liquidaciondiversos.example;
+package com.liquidaciondiversos.example;
 
-import liquidaciondiversos.Main;
-import liquidaciondiversos.model.*;
+import com.liquidaciondiversos.service.Sinister;
+import com.liquidaciondiversos.model.*;
+import lombok.Data;
 
 import java.util.*;
 
+@Data
 public class BaseData {
     private Map<String, Product> products;
     private Map<String, Risk> risks;
@@ -24,7 +26,7 @@ public class BaseData {
         createClients();
         createProducts();
         createPolicies();
-        createSinisters();
+        //createSinisters();
 
     }
 
@@ -68,6 +70,7 @@ public class BaseData {
         this.risks.put(riskWind.getCode(), riskWind);
 
     }
+    /**
     private void createSinisters(){
         this.sinisters = new HashMap<String, Sinister>();
         Date fechaActual = new Date();
@@ -81,7 +84,7 @@ public class BaseData {
         this.sinisters.put(sinister1.getCode(), sinister1);
 
 
-    }
+    }*/
 
     private void createWarranties(){
         this.warranties = new HashMap<String, Warranty>();
@@ -220,4 +223,6 @@ public class BaseData {
         return warranties;
 
     }
+
+
 }

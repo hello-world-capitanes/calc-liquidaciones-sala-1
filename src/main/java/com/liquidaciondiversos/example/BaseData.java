@@ -2,6 +2,8 @@ package com.liquidaciondiversos.example;
 
 import com.liquidaciondiversos.model.Sinister;
 import com.liquidaciondiversos.model.*;
+import com.liquidaciondiversos.model.enums.PaymentType;
+import com.liquidaciondiversos.model.enums.WarrantyType;
 import lombok.Data;
 
 import java.util.*;

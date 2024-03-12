@@ -1,6 +1,6 @@
 package com.liquidaciondiversos.example;
 
-import com.liquidaciondiversos.service.Sinister;
+import com.liquidaciondiversos.model.Sinister;
 import com.liquidaciondiversos.model.*;
 import lombok.Data;
 

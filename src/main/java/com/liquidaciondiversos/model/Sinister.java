@@ -1,4 +1,4 @@
-package com.liquidaciondiversos.service;
+package com.liquidaciondiversos.model;
 
 import com.liquidaciondiversos.model.Policy;
 import com.liquidaciondiversos.model.ProductWarranty;

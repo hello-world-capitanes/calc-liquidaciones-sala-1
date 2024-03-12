@@ -3,7 +3,7 @@ package com.liquidaciondiversos.application;
 
 import com.liquidaciondiversos.model.Policy;
 import com.liquidaciondiversos.service.ILiquidation;
-import com.liquidaciondiversos.service.Sinister;
+import com.liquidaciondiversos.model.Sinister;
 import org.springframework.stereotype.Component;
 
 import java.text.ParseException;
@@ -35,9 +35,6 @@ public class LiquidationApplication {
 
             if(sinister != null){
                 calculateLiquidation();
-
-                printLiquidation();
-
             }
 
         }
@@ -74,9 +71,6 @@ public class LiquidationApplication {
         return liquidation.searchCode(policyCode);
     }
 
-    private void printLiquidation() {
-        System.out.println("Siniestro: " + liquidation.getSinister() + " - Importe total de liquidación: " + liquidation.getLiquidation());
-    }
 
     private void calculateLiquidation() {
         liquidation.calculoLiquidaciones();

@@ -4,11 +4,10 @@ package com.liquidaciondiversos.service;
 import com.liquidaciondiversos.example.BaseData;
 import com.liquidaciondiversos.model.Policy;
 import com.liquidaciondiversos.model.ProductWarranty;
+import com.liquidaciondiversos.model.Sinister;
 import lombok.Data;
-import lombok.Getter;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.Temporal;
 
@@ -31,12 +30,18 @@ public class Liquidation implements ILiquidation{
         comprobarExcluida();
         calcularTipoValoracion();
         calcularInfraSeguro();
+        printLiquidation();
     }
 
-    public void calcularInfraSeguro() {
+    private void printLiquidation() {
+        System.out.println("Siniestro: " + getSinister() +
+                " - Importe total de liquidación: " + getLiquidation());
     }
 
-    public void calcularTipoValoracion() {
+    private void calcularInfraSeguro() {
+    }
+
+    private void calcularTipoValoracion() {
         for (ProductWarranty warranty : sinister.getDamagedList()){
             double importe = 0;
             switch (warranty.getPaymentType()){
@@ -95,7 +100,7 @@ public class Liquidation implements ILiquidation{
         return total;
     }
 
-    public void comprobarExcluida() {
+    private void comprobarExcluida() {
         for(ProductWarranty warranty : sinister.getDamagedList()){
             if(warranty.isExcluded()){
                 liquidation = 0;
@@ -122,8 +127,7 @@ public class Liquidation implements ILiquidation{
         this.sinister = sinister;
     }
 
-    @Override
-    public double getLiquidation() {
+    private double getLiquidation() {
         return liquidation;
     }
 

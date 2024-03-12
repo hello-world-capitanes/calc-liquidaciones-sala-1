@@ -1,23 +1,57 @@
-package liquidaciondiversos.example;
+package com.liquidaciondiversos.example;
 
-import liquidaciondiversos.model.*;
+import com.liquidaciondiversos.model.Sinister;
+import com.liquidaciondiversos.model.*;
+import lombok.Data;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
+@Data
 public class BaseData {
     private Map<String, Product> products;
     private Map<String, Risk> risks;
 
     private Map<String, Warranty> warranties;
 
+    private Map<Integer, Client> clients;
+
+    private Map<Integer, Policy> policies;
+
+    private Map<String, Sinister> sinisters;
+
     public BaseData(){
+
         createRisks();
         createWarranties();
+        createClients();
         createProducts();
+        createPolicies();
+        //createSinisters();
 
+    }
+
+    private void createClients(){
+        this.clients = new HashMap<Integer, Client>();
+        Client client1 = new Client();
+        client1.setId(1);
+        client1.setName("Carlos");
+        client1.setSurname("Gómez");
+        client1.setDirection("Passeig de Gràcia, 175, Barcelona");
+        client1.setTelephone("632975473");
+        client1.setNif("52873237X");
+        client1.setWarranty(this.warranties.get("RO"));
+        this.clients.put(client1.getId(), client1);
+
+        Client client2 = new Client();
+
+        client2.setId(2);
+        client2.setName("Laura");
+        client2.setSurname("Jiménez");
+        client2.setDirection("Gran Via, 99, Madrid");
+        client2.setTelephone("721654123");
+        client2.setNif("41009243D");
+        client2.setWarranty(this.warranties.get("HA"));
+        this.clients.put(client2.getId(), client2);
 
     }
 
@@ -36,6 +70,21 @@ public class BaseData {
         this.risks.put(riskWind.getCode(), riskWind);
 
     }
+    /**
+    private void createSinisters(){
+        this.sinisters = new HashMap<String, Sinister>();
+        Date fechaActual = new Date();
+        Sinister sinister1 = new Sinister();
+        sinister1.setCode("RO");
+        sinister1.setPolicy(this.policies.get(2));
+        sinister1.setDate(fechaActual);
+        sinister1.setCause("Robery Outside");
+        sinister1.setDamagedList(createProductWarranties());
+
+        this.sinisters.put(sinister1.getCode(), sinister1);
+
+
+    }*/
 
     private void createWarranties(){
         this.warranties = new HashMap<String, Warranty>();
@@ -74,6 +123,23 @@ public class BaseData {
         product.setProductWarranties(this.createProductWarranties());
 
         this.products.put(product.getCode(), product);
+    }
+
+    private void createPolicies(){
+        this.policies = new HashMap<Integer, Policy>();
+        Policy policy = new Policy();
+        policy.setId(1);
+        policy.setProduct(this.products.get("HOGAR15"));
+        policy.setClient(this.clients.get(2));
+        this.policies.put(policy.getId(), policy);
+
+        Policy policy2 = new Policy();
+        policy2.setId(2);
+        policy2.setProduct(this.products.get("HOGAR15"));
+        policy2.setClient(this.clients.get(1));
+        this.policies.put(policy2.getId(), policy2);
+
+
     }
 
     private List<ProductWarranty> createProductWarranties(){
@@ -157,4 +223,6 @@ public class BaseData {
         return warranties;
 
     }
+
+
 }

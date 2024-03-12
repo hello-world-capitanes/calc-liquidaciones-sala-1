@@ -1,7 +1,8 @@
-package liquidaciondiversos;
+package com.liquidaciondiversos;
 
-import liquidaciondiversos.application.LiquidationApplication;
-import liquidaciondiversos.configuration.AppConfig;
+
+import com.liquidaciondiversos.application.LiquidationApplication;
+import com.liquidaciondiversos.configuration.AppConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {

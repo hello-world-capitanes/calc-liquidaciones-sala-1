@@ -1,4 +1,4 @@
-package liquidaciondiversos.model;
+package com.liquidaciondiversos.model;
 
 public enum PaymentType {
     PRIMER_RIESGO,

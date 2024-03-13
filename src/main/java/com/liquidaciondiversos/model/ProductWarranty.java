@@ -1,5 +1,6 @@
 package com.liquidaciondiversos.model;
 
+import com.liquidaciondiversos.model.enums.PaymentType;
 import lombok.Data;
 
 @Data

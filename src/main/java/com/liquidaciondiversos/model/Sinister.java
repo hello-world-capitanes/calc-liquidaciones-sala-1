@@ -9,7 +9,6 @@ import java.util.Date;
 import java.util.List;
 
 @Data
-@Component
 public class Sinister {
     private String code;
     private Policy policy;

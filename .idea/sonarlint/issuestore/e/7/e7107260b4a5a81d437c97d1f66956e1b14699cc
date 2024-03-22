@@ -1,0 +1,16 @@
+
+f	java:S106"+Replace this use of System.out by a logger.(Ëß—J$f5dafd17-a256-4781-aa3e-0f4af5a93f12
+f	java:S106'"+Replace this use of System.err by a logger.(Û–¹ÙJ$986294de-ec2d-4c6a-865c-33d528b84c60
+k	java:S106."+Replace this use of System.out by a logger.(òğıÑùÿÿÿÿJ$ba9b7194-191d-44ba-848a-94df68f72bb3
+k	java:S1063"+Replace this use of System.out by a logger.(ä½ØšüÿÿÿÿJ$cf94557a-7e53-47a6-93a8-db427d26fe34
+f	java:S106:"+Replace this use of System.out by a logger.(§™ôœJ$bfc5d5f5-754f-4a63-ad5f-3683bde5d8e0
+f	java:S106="+Replace this use of System.out by a logger.(ı‰ÛJ$057155f0-c425-44b0-9781-60fbd2ec369c
+k	java:S106A"+Replace this use of System.out by a logger.(¦ªíëıÿÿÿÿJ$fed06269-8bea-49ab-a9b6-2e552dcb65e2
+f	java:S106F"+Replace this use of System.out by a logger.(€æ©J$f9236f5f-a9e1-4e32-bf0e-c10a1669db52
+f	java:S106I"+Replace this use of System.out by a logger.(ŞŒİJ$52d684b5-7160-4b18-a91d-141be9e23b3b
+‹
+java:S1128"ORemove this unused import 'org.springframework.web.bind.annotation.GetMapping'.(‡¡‰ØJ$52ead74e-0559-4bcd-a0c8-6f9fddcfb94a
+‘
+java:S1128"PRemove this unused import 'org.springframework.web.bind.annotation.PostMapping'.(äƒà°ùÿÿÿÿJ$30f406ac-eb16-46f4-b54d-a05d813f83cc
+‘
+java:S1128"PRemove this unused import 'org.springframework.web.bind.annotation.RequestBody'.(â­½ÀıÿÿÿÿJ$c1347015-ee4b-4a6e-b97d-04de198122e3

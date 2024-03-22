@@ -21,3 +21,6 @@ i
 9src/main/java/com/liquidaciondiversos/model/Warranty.java,c\1\c1d834813ff10f6ae5ab68454aae7c2258d5f547
 }
 Msrc/main/java/com/liquidaciondiversos/application/LiquidationApplication.java,8\c\8ce31278903141e150354b4282828abc989dce23
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
